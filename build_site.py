@@ -15,7 +15,7 @@ import markdown
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 ROOT = Path(__file__).parent
-SITE = ROOT / "site"
+SITE = ROOT / "docs"  # GitHub Pages 브랜치 배포는 루트 또는 /docs만 지원
 SITE_TITLE = "3분 정리"
 SITE_DESC = "경제 · IT · 생활, 매일 아침 3분이면 끝나는 뉴스 정리"
 

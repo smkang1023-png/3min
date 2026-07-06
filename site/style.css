@@ -1,0 +1,31 @@
+
+:root { --ink:#17171c; --gray:#5f5f69; --line:#e8e8e6; --bg:#fafaf8; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Pretendard","Malgun Gothic","Apple SD Gothic Neo",sans-serif; line-height:1.7; }
+.top { display:flex; justify-content:space-between; align-items:center;
+  padding:18px 24px; border-bottom:1px solid var(--line); background:#fff; }
+.brand { font-weight:800; font-size:20px; color:var(--ink); text-decoration:none; }
+.top nav a { color:var(--gray); text-decoration:none; margin-left:16px; }
+main { max-width:720px; margin:0 auto; padding:24px 20px 60px; }
+.hero { padding:36px 0 8px; }
+.hero h1 { font-size:40px; margin:0 0 8px; }
+.hero p { color:var(--gray); margin:0; }
+.list { display:grid; gap:16px; margin-top:28px; }
+.card { display:block; background:#fff; border:1px solid var(--line); border-radius:14px;
+  padding:22px 24px; text-decoration:none; color:var(--ink); transition:transform .1s; }
+.card:hover { transform:translateY(-2px); }
+.card h2 { font-size:21px; margin:10px 0 6px; line-height:1.45; }
+.card .sum { color:var(--gray); font-size:15px; margin:6px 0 0; }
+.badge { display:inline-block; color:#fff; font-size:13px; font-weight:700;
+  padding:3px 12px; border-radius:12px; }
+.date { color:var(--gray); font-size:14px; margin:4px 0 0; }
+.post { background:#fff; border:1px solid var(--line); border-radius:14px; padding:30px 28px; }
+.post h1 { font-size:28px; line-height:1.45; }
+.post h2 { font-size:21px; margin-top:34px; border-left:4px solid var(--ink); padding-left:12px; }
+.post blockquote { margin:16px 0; padding:12px 18px; background:var(--bg);
+  border-left:4px solid #ccc; color:var(--gray); }
+.post hr { border:none; border-top:1px solid var(--line); margin:30px 0; }
+footer { max-width:720px; margin:0 auto; padding:24px 20px 48px;
+  color:var(--gray); font-size:13px; border-top:1px solid var(--line); }
+footer a { color:var(--gray); }

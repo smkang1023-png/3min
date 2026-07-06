@@ -1,0 +1,35 @@
+{
+  "econ": {
+    "display": "경제",
+    "series": "오늘 경제, 3분 정리",
+    "handle": "@3min.econ",
+    "sources": {
+      "trends": "https://trends.google.co.kr/trending/rss?geo=KR",
+      "news_top": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
+      "news_biz": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=ko&gl=KR&ceid=KR:ko"
+    },
+    "theme": {
+      "cover_bg": [29, 78, 216],
+      "accent": [29, 78, 216],
+      "highlight": [255, 214, 10],
+      "chip_text": [23, 23, 30]
+    }
+  },
+  "techlife": {
+    "display": "IT · 생활",
+    "series": "IT·생활, 3분 정리",
+    "handle": "@3min.techlife",
+    "sources": {
+      "trends": "https://trends.google.co.kr/trending/rss?geo=KR",
+      "news_tech": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ko&gl=KR&ceid=KR:ko",
+      "news_life": "search:생활 꿀팁 정보",
+      "news_consumer": "search:소비자 혜택 변경"
+    },
+    "theme": {
+      "cover_bg": [91, 33, 182],
+      "accent": [109, 40, 217],
+      "highlight": [190, 242, 60],
+      "chip_text": [23, 23, 30]
+    }
+  }
+}

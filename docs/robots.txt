@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://smkang1023-png.github.io/3min/sitemap.xml

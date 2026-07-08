@@ -22,7 +22,7 @@ SITE_TITLE = "3분 정리"
 SITE_DESC = "경제 · IT · 생활, 매일 아침 3분이면 끝나는 뉴스 정리"
 # GitHub Pages 주소 확정 후 기입 (예: "https://<계정>.github.io/<repo>").
 # 비어 있으면 canonical/og:url/RSS/sitemap은 생략되고, 채우면 다음 빌드에서 자동 생성된다.
-BASE_URL = ""
+BASE_URL = "https://smkang1023-png.github.io/3min"
 
 NICHE_COLOR = {"econ": "#1D4ED8", "techlife": "#6D28D9", "ai": "#0891B2"}
 

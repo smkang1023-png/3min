@@ -2,7 +2,7 @@
   "econ": {
     "display": "경제",
     "series": "오늘 경제, 3분 정리",
-    "handle": "@3min.econ",
+    "handle": "@3.min.eco",
     "hashtags": ["#경제뉴스", "#오늘의뉴스", "#뉴스요약", "#경제공부", "#재테크", "#주식", "#금융", "#경제정리"],
     "sources": {
       "trends": "https://trends.google.co.kr/trending/rss?geo=KR",

@@ -15,6 +15,19 @@
       "chip_text": [23, 23, 30]
     }
   },
+  "ai": {
+    "display": "AI 트렌드",
+    "series": "AI 트렌드, 3분 정리",
+    "handle": "@3min.aitrend",
+    "sources": {},
+    "_note": "수집은 collect_ai.py (레딧 RSS + Hacker News). trends.py 대상 아님. 검수는 VERIFIER_SPEC §5.5 라이트 모드",
+    "theme": {
+      "cover_bg": [15, 23, 42],
+      "accent": [8, 145, 178],
+      "highlight": [103, 232, 249],
+      "chip_text": [15, 23, 42]
+    }
+  },
   "techlife": {
     "display": "IT · 생활",
     "series": "IT·생활, 3분 정리",

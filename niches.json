@@ -3,6 +3,7 @@
     "display": "경제",
     "series": "오늘 경제, 3분 정리",
     "handle": "@3min.econ",
+    "hashtags": ["#경제뉴스", "#오늘의뉴스", "#뉴스요약", "#경제공부", "#재테크", "#주식", "#금융", "#경제정리"],
     "sources": {
       "trends": "https://trends.google.co.kr/trending/rss?geo=KR",
       "news_top": "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
@@ -19,6 +20,7 @@
     "display": "AI 트렌드",
     "series": "AI 트렌드, 3분 정리",
     "handle": "@3min.aitrend",
+    "hashtags": ["#AI", "#인공지능", "#AI트렌드", "#AI뉴스", "#챗GPT", "#클로드", "#테크트렌드", "#AI소식"],
     "sources": {},
     "_note": "수집은 collect_ai.py (레딧 RSS + Hacker News). trends.py 대상 아님. 검수는 VERIFIER_SPEC §5.5 라이트 모드",
     "theme": {
@@ -32,6 +34,7 @@
     "display": "IT · 생활",
     "series": "IT·생활, 3분 정리",
     "handle": "@3min.techlife",
+    "hashtags": ["#IT뉴스", "#테크", "#IT트렌드", "#생활정보", "#생활꿀팁", "#신제품", "#뉴스요약", "#오늘의뉴스"],
     "sources": {
       "trends": "https://trends.google.co.kr/trending/rss?geo=KR",
       "news_tech": "https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=ko&gl=KR&ceid=KR:ko",

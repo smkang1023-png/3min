@@ -5,9 +5,11 @@
 출력: site/index.html, site/posts/<slug>.html, about/privacy/style.css
 GitHub Pages에 site/ 폴더를 올리면 그대로 블로그가 된다.
 """
+import html
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import markdown
@@ -18,6 +20,9 @@ ROOT = Path(__file__).parent
 SITE = ROOT / "docs"  # GitHub Pages 브랜치 배포는 루트 또는 /docs만 지원
 SITE_TITLE = "3분 정리"
 SITE_DESC = "경제 · IT · 생활, 매일 아침 3분이면 끝나는 뉴스 정리"
+# GitHub Pages 주소 확정 후 기입 (예: "https://<계정>.github.io/<repo>").
+# 비어 있으면 canonical/og:url/RSS/sitemap은 생략되고, 채우면 다음 빌드에서 자동 생성된다.
+BASE_URL = ""
 
 NICHE_COLOR = {"econ": "#1D4ED8", "techlife": "#6D28D9", "ai": "#0891B2"}
 
@@ -28,7 +33,12 @@ PAGE = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<link rel="stylesheet" href="{css}">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:type" content="{og_type}">
+<meta property="og:site_name" content="{site_title}">
+<meta property="og:locale" content="ko_KR">
+{extra_head}<link rel="stylesheet" href="{css}">
 <!-- adsense: 승인 후 이 자리에 스크립트 삽입 -->
 </head>
 <body>
@@ -115,10 +125,58 @@ def badge(niches, niche):
     return f'<span class="badge" style="background:{color}">{label}</span>'
 
 
-def write_page(path, title, desc, body, home):
+def post_date_iso(slug):
+    """slug 앞 8자리(YYYYMMDD) → ISO 날짜. 형식이 다르면 None."""
+    m = re.match(r"(\d{4})(\d{2})(\d{2})", slug)
+    return f"{m.group(1)}-{m.group(2)}-{m.group(3)}" if m else None
+
+
+def write_page(path, title, desc, body, home, og_type="website", rel_url=None):
+    extra = []
+    if BASE_URL and rel_url is not None:
+        extra.append(f'<link rel="canonical" href="{BASE_URL}/{rel_url}">')
+        extra.append(f'<meta property="og:url" content="{BASE_URL}/{rel_url}">')
+    if BASE_URL:
+        extra.append(f'<link rel="alternate" type="application/rss+xml" '
+                     f'title="{SITE_TITLE}" href="{BASE_URL}/feed.xml">')
+    extra_head = "".join(f"{tag}\n" for tag in extra)
+    title, desc = html.escape(title, quote=True), html.escape(desc, quote=True)
     path.write_text(
-        PAGE.format(title=title, desc=desc, body=body, home=home,
+        PAGE.format(title=title, desc=desc, body=body, home=home, og_type=og_type,
+                    extra_head=extra_head,
                     css=f"{home}style.css", site_title=SITE_TITLE, site_desc=SITE_DESC),
+        encoding="utf-8")
+
+
+def write_feed(posts):
+    """RSS 2.0 — BASE_URL이 있어야 절대 링크를 만들 수 있다."""
+    items = []
+    for p in posts:
+        iso = post_date_iso(p["slug"])
+        pub = ""
+        if iso:
+            dt = datetime.fromisoformat(iso).replace(hour=7, tzinfo=timezone.utc)
+            pub = f"<pubDate>{dt.strftime('%a, %d %b %Y %H:%M:%S +0000')}</pubDate>"
+        link = f"{BASE_URL}/posts/{p['slug']}.html"
+        items.append(
+            f"<item><title>{html.escape(p['title'])}</title>"
+            f"<link>{link}</link><guid>{link}</guid>{pub}"
+            f"<description>{html.escape(p['summary'])}</description></item>")
+    feed = (f'<?xml version="1.0" encoding="UTF-8"?>\n'
+            f'<rss version="2.0"><channel>'
+            f'<title>{html.escape(SITE_TITLE)}</title><link>{BASE_URL}/</link>'
+            f'<description>{html.escape(SITE_DESC)}</description>'
+            f'<language>ko</language>{"".join(items)}</channel></rss>\n')
+    (SITE / "feed.xml").write_text(feed, encoding="utf-8")
+
+
+def write_sitemap(posts):
+    urls = [f"{BASE_URL}/", f"{BASE_URL}/about.html", f"{BASE_URL}/privacy.html"]
+    urls += [f"{BASE_URL}/posts/{p['slug']}.html" for p in posts]
+    body = "".join(f"<url><loc>{u}</loc></url>" for u in urls)
+    (SITE / "sitemap.xml").write_text(
+        f'<?xml version="1.0" encoding="UTF-8"?>\n'
+        f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{body}</urlset>\n',
         encoding="utf-8")
 
 
@@ -132,7 +190,8 @@ def main():
         body = f'<article class="post">{badge(niches, p["niche"])}' \
                f'<p class="date">{p["date"]}</p>{p["html"]}</article>'
         write_page(SITE / "posts" / f'{p["slug"]}.html', f'{p["title"]} — {SITE_TITLE}',
-                   p["summary"], body, home="../")
+                   p["summary"], body, home="../", og_type="article",
+                   rel_url=f'posts/{p["slug"]}.html')
 
     # 목록
     items = "\n".join(
@@ -141,16 +200,23 @@ def main():
         f'<p class="date">{p["date"]}</p><p class="sum">{p["summary"]}</p></a>'
         for p in posts)
     hero = f'<section class="hero"><h1>{SITE_TITLE}</h1><p>{SITE_DESC}</p></section>'
-    write_page(SITE / "index.html", SITE_TITLE, SITE_DESC, hero + f'<section class="list">{items}</section>', home="")
+    write_page(SITE / "index.html", SITE_TITLE, SITE_DESC, hero + f'<section class="list">{items}</section>', home="", rel_url="")
 
     write_page(SITE / "about.html", f"소개 — {SITE_TITLE}", SITE_DESC,
-               f'<article class="post">{md_to_html(ABOUT_MD)}</article>', home="")
+               f'<article class="post">{md_to_html(ABOUT_MD)}</article>', home="", rel_url="about.html")
     write_page(SITE / "privacy.html", f"개인정보처리방침 — {SITE_TITLE}", SITE_DESC,
-               f'<article class="post">{md_to_html(PRIVACY_MD)}</article>', home="")
+               f'<article class="post">{md_to_html(PRIVACY_MD)}</article>', home="", rel_url="privacy.html")
 
     (SITE / "style.css").write_text(CSS, encoding="utf-8")
     (SITE / ".nojekyll").write_text("", encoding="utf-8")
-    print(f"글 {len(posts)}개 + 색인/소개/방침 → {SITE}")
+    robots = "User-agent: *\nAllow: /\n"
+    if BASE_URL:
+        robots += f"Sitemap: {BASE_URL}/sitemap.xml\n"
+        write_feed(posts)
+        write_sitemap(posts)
+    (SITE / "robots.txt").write_text(robots, encoding="utf-8")
+    seo = "RSS/sitemap 포함" if BASE_URL else "RSS/sitemap은 BASE_URL 기입 후 생성"
+    print(f"글 {len(posts)}개 + 색인/소개/방침/robots ({seo}) → {SITE}")
 
 
 CSS = """

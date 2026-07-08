@@ -1,0 +1,57 @@
+{
+  "slug": "20260708_econ",
+  "niche": "econ",
+  "date": "2026. 7. 8. 수요일",
+  "cover": {
+    "headline": "오늘 경제,\n3분 정리",
+    "sub": "증시 · 삼성 · 경상수지 · 빚투\n출근길 3분이면 오늘 치 끝",
+    "emoji": "📰"
+  },
+  "cards": [
+    {
+      "title": "코스피 5% 급락, 또 매도사이드카",
+      "body": "삼성전자 쇼크에 중동 긴장까지 겹치며 코스피가 5% 넘게 빠졌고, 매도사이드카가 발동됐습니다. 실적이 좋아도 주가는 딴판일 수 있는 장세입니다.",
+      "emoji": "📉",
+      "source": {
+        "outlet": "경향신문",
+        "title": "[속보]코스피, 5% 급락에 또 매도사이드카 발동",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9PSGZrLVBYOXNMd25oZTlLcURUdGl1bWhrMzVzNHU2UWs0eTY2YUtTRDdJY2Uzeko4eURNX0lXWkM0ODdSMjZDZWJnMWZ1MGNjN1g4cDFjZ2lkUdIBX0FVX3lxTFBEb3I5OG1LZDZpcXpXWDBKZ01jNERtQmtQNjZwM0JiNXpLT1hvSFU0TldQQ0VoZzB4c3VQMVBSTVNHT0RMWldManZOdnowSW9JbFZHOWJybXZUdDNuQWxv?oc=5"
+      }
+    },
+    {
+      "title": "삼성전자 목표가 39만 vs 60만",
+      "body": "역대급 실적의 삼성전자를 두고 키움은 39만 원, KB는 60만 원을 불렀습니다. 전망이 이만큼 갈린다는 건 앞날이 그만큼 불확실하다는 뜻입니다.",
+      "emoji": "🎯",
+      "source": {
+        "outlet": "연합인포맥스",
+        "title": "'역대급 실적' 삼성전자 목표가 극과극…키움 39만원 하향 VS KB 60만원 상향",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5wQVpCNHJHUDZ1WW1rTzFkd2NRR2ZVbE5yVjdfaHR4NEVZa1VvdG9mcnltOTVuNHZqVzRKa0JUYks3a2NQQXdNbFJLN1NEa3lRTnlOUzV5NC1wbjEwZHY5MERrNzIyYy1LRlhVWGVFWEw?oc=5"
+      }
+    },
+    {
+      "title": "5월 경상수지 흑자, 역대 1위",
+      "body": "5월 경상수지가 386억 달러 흑자로 역대 최대였습니다. 반도체 수출 호조 덕입니다. 나라 벌이는 좋은데 증시는 흔들리는, 체감과 따로 노는 국면입니다.",
+      "emoji": "💰",
+      "source": {
+        "outlet": "MBC 뉴스",
+        "title": "[속보] 반도체 수출 호조에, 지난 5월 경상수지 386억 달러 흑자‥'역대 1위'",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5adGhFUkQ3QXlNdWxKZmZodW5jREV6Mkk4dGRBZlZtRF93dUhJTlI0ZERlbmowN3J3cExXSWZub0ItM05oQ3hBUjZweFU1dzEwVENIdGszeGdKZDdUaGNYb2xRM3R1RWVWYmI3X3EwWDhGMnM50gF0QVVfeXFMTzBOSDZteldMZnI0WjZJaUhHYm5KRTVERVRsd1BuaVJ1RDhERzZTYk1TUURIdXlWTEJVbGM1a1NSTjFoQlNyMXVmNzlhRDNLaGxQX2xqdFVBZlY4NUx2dC1mdVZ3NHpoVFBqUmpsbUxHQTdXV2s?oc=5"
+      }
+    },
+    {
+      "title": "금감원장 '빚투 확산' 경고",
+      "body": "금융감독원장이 빚투 확산에 \"가계 재무건전성이 심각하게 훼손될 수 있다\"고 경고했습니다. 급락장에서 빌린 돈 투자는 손실이 몇 배로 커집니다.",
+      "emoji": "⚠️",
+      "source": {
+        "outlet": "조선일보",
+        "title": "‘레버리지 투자’ 확산에…금감원장 “가계 재무건전성 심각하게 훼손될 수 있어”",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONHRkMHY4VFV6ZHJtaUJGNWxVY29JQndOLWpiNHpqZ3FIU284V0RZVGt2WHlCbG1FS1pjRnhoMGdYYWt0eEs1Mm4ybnBfdFFxMDktRWJPdXZGMFNWZGNvMTNDYmtpZHhjeW5QRXhKYjFUYXBaamcxczJLQ25iUGs5dWFpdDBYRTNHc0JDQWtn?oc=5"
+      }
+    }
+  ],
+  "outro": {
+    "text": "오늘도 3분,\n경제 흐름 놓치지 않아요",
+    "note": "팔로우하고 저장해 두세요. 본 콘텐츠는 정보 제공 목적이며, 투자 판단의 책임은 본인에게 있습니다.",
+    "emoji": "🙌"
+  }
+}

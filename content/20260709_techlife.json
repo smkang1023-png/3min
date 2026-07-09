@@ -1,0 +1,57 @@
+{
+  "slug": "20260709_techlife",
+  "niche": "techlife",
+  "date": "2026. 7. 9. 목요일",
+  "cover": {
+    "headline": "IT·생활,\n3분 정리",
+    "sub": "위성 · 갤폴드8 · 스위치 · 안면인증\n오늘 바뀐 것만 골랐어요",
+    "emoji": "📡"
+  },
+  "cards": [
+    {
+      "title": "한국판 스타링크 512기",
+      "body": "정부가 저궤도 통신위성을 최대 512기 띄우는 '한국판 스타링크'를 추진합니다. 위성으로 인터넷을 보완하겠다는 그림입니다. 통신 인프라의 판이 커지고 있습니다.",
+      "emoji": "🛰️",
+      "source": {
+        "outlet": "조선일보",
+        "title": "한국판 스타링크 추진… 저궤도 위성 최대 512기 띄운다",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNU1N4bF9fSGdldldHWk5jSW1XQTRxaXptRDdpQUlqUUZkODl0RHd5MExkY1J0SDE1VzJocmJkbGdaWnJlTlVWdk5YalIwc1RkakROU3NEUjNETXVmczNZd2FFX3o3Qy1UY1FOSnhReE4xZEprR1kyaUJJbWFpMFJOeWU1TQ?oc=5"
+      }
+    },
+    {
+      "title": "갤폴드8 렌더링 유출",
+      "body": "갤럭시 폴드8·플립8·울트라의 공식 렌더링이 대거 유출됐다는 보도가 나왔습니다. 22일 언팩 전에 디자인 윤곽이 드러난 셈입니다. 폰 교체는 언팩까지 기다려 볼 만합니다.",
+      "emoji": "📱",
+      "source": {
+        "outlet": "뉴스1",
+        "title": "다 나왔다…갤폴드8·울트라·플립8 공식 렌더링 대거 유출",
+        "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4td3AzZ2VIN3JDSXNRbmxTUkRNQ2lCdUxobjA5TWZGQmhZa05pR3o1YzBhdVVudFFxb3RVWmhDMkxTWlVxaVpYY0NmSUhJVTRWNjJ0N2pnODBHX09iN2t3?oc=5"
+      }
+    },
+    {
+      "title": "스위치, 유럽 판매 중단",
+      "body": "EU가 전자기기 배터리를 탈착식으로 바꾸게 하면서 닌텐도 스위치의 유럽 판매가 내년 중단됩니다. 배터리 규제가 기기 설계까지 바꾸는 흐름입니다.",
+      "emoji": "🔋",
+      "source": {
+        "outlet": "조선일보",
+        "title": "EU 전자기기 배터리 탈착식 전환에… '닌텐도 스위치' 내년 유럽 판매 중단",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPYWhMNktQV0x3a1JMN2NvZlhiYVQ4TkRieWR1YTluXy1FdTUxaUpxRFVESnVKcldfTVI1UGZFSGlPRzFPWFNSLWxadmFWb2FaM1psUkw5ZjhWd2R0RUhnUGRvMTBDY0pZTDNXUlJ1VEVaaFQ0YkZtQXN4Zk5zbFpTbDRpOA?oc=5"
+      }
+    },
+    {
+      "title": "휴대폰 개통, 얼굴로 3초",
+      "body": "휴대폰 개통 본인 확인에 안면인증이 도입돼 3초 만에 끝났다는 체험 보도가 나왔습니다. 서류 오가던 절차가 줄어드는 변화입니다. 다음 개통 때 직접 확인해 보세요.",
+      "emoji": "🪪",
+      "source": {
+        "outlet": "지디넷코리아",
+        "title": "3초만에 끝...휴대폰 개통 안면인증 직접 해보니",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9SOUpIbm01dUJwcmtHaF9VdHpYc3pMNEJGX1V0U3ZMZzA2ZHpaM1VkWnAzRmVlQm9vM3lJUUUxQk9YZ1E4T2kxZnlGdFFDa1ZsR1pXU3Jn?oc=5"
+      }
+    }
+  ],
+  "outro": {
+    "text": "내일도 3분,\n오늘 바뀐 것만",
+    "note": "팔로우하고 저장해 두세요. 본 콘텐츠는 정보 제공 목적입니다.",
+    "emoji": "✅"
+  }
+}

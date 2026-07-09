@@ -1,0 +1,57 @@
+{
+  "slug": "20260709_econ",
+  "niche": "econ",
+  "date": "2026. 7. 9. 목요일",
+  "cover": {
+    "headline": "오늘 경제,\n3분 정리",
+    "sub": "반등 · 대출 한도 · 나라살림 · 환율\n숫자로 보는 오늘, 3분이면 끝",
+    "emoji": "📊"
+  },
+  "cards": [
+    {
+      "title": "코스피, 4일 만에 반등",
+      "body": "코스피·코스닥이 4일 만에 상승으로 돌아섰고 SK하이닉스는 급등했습니다. 다만 급락 직후의 반등 하루로 방향을 단정하기는 이릅니다.",
+      "emoji": "📈",
+      "source": {
+        "outlet": "YTN",
+        "title": "코스피·코스닥 4일 만에 상승...하이닉스 '급등'",
+        "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9GRzVDd2hGUVRJVjRlRXZkalBKaDZPanRYMnI0Z0V0QXZUUVdwQ2lBM1BUajNKaEJ1LUlHc3ZTdm9WWHljSlpMUk1RTTNyLTh5WkFVUGJ1V2hUbGlDcHc?oc=5"
+      }
+    },
+    {
+      "title": "주담대 한도 6억→3억",
+      "body": "KB국민은행이 주택담보대출 한도를 6억 원에서 3억 원으로 줄였습니다. 총량에 여유가 있는데도 조인 겁니다. 주택 자금 계획이 있다면 은행별 한도부터 확인하세요.",
+      "emoji": "🏠",
+      "source": {
+        "outlet": "연합인포맥스",
+        "title": "KB국민은행, 주담대 6억→3억…총량 여유 있는데 홀로 왜 조였나",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1lcGdxZllKb1ZQRGlOWHdDLVVhLTZUaWFWV2x0cDFPeXdhc0FYR3dOUmQxSjNIaTV4NGVSc2J5N3hRQThUX1RfUmVtenJlLVpxd0YtUVBMeXBucDFRQzBXVElVeEVJV2RGY3NsdlFMTFI?oc=5"
+      }
+    },
+    {
+      "title": "세금 28조 더, 적자 그대로",
+      "body": "세금이 28조 원 더 걷혔는데 나라살림 적자는 54조 원 그대로였습니다. 들어온 만큼 나가는 돈도 늘었다는 뜻입니다. 재정 여력은 보기보다 빠듯합니다.",
+      "emoji": "🧾",
+      "source": {
+        "outlet": "매일경제",
+        "title": "세금 28조 더 걷혔는데…나라살림 적자 54조 그대로, 왜?",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4xVlNfOUw4cXF5Zm5iRzdubDh2YnFPcjZmVGw3cW9YVU15MTE1dDlLZ2lkZTlPYWlTaEJIOGdSa2g4MXlRamNOcVRTeEdsSVVncVVXWQ?oc=5"
+      }
+    },
+    {
+      "title": "환율 다시 1,510원대",
+      "body": "달러-원 환율이 런던장에서 트럼프 발언에 다시 1,510원대로 올라섰습니다. 해외직구·여행 비용에 바로 닿는 숫자입니다. 환전은 시점을 나누는 게 안전합니다.",
+      "emoji": "💱",
+      "source": {
+        "outlet": "연합인포맥스",
+        "title": "달러-원, 런던장서 트럼프 발언에 다시 1,510원대 진입",
+        "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1wRGZGbkdHTDJMMkh3SWs5X2JKa0ZHWENTa1JZWExRRzBRX29RN2lJZlA3UktNalBhaV82XzgwVUlaaS1QY1FBamZuYUEzVDV1Zi1OS1lSWm9US29LTENDWEM5QkZ2YmxJdFpPbm5GZk4?oc=5"
+      }
+    }
+  ],
+  "outro": {
+    "text": "내일도 3분,\n흐름만 챙겨요",
+    "note": "팔로우하고 저장해 두세요. 본 콘텐츠는 정보 제공 목적이며, 투자 판단의 책임은 본인에게 있습니다.",
+    "emoji": "💙"
+  }
+}

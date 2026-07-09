@@ -95,6 +95,22 @@ def parse_rss(raw, source):
     return items
 
 
+def build_shortlist(rows, limit=40):
+    """검증 매체 항목 상위 limit건 (제목 중복 제거, 수집 순서 유지).
+
+    소재 선정 세션은 전체 topics JSON 대신 이 목록만 읽는다 (토큰 절감).
+    """
+    seen, picked = set(), []
+    for r in rows:
+        if not r.get("trusted") or r["title"] in seen:
+            continue
+        seen.add(r["title"])
+        picked.append(r)
+        if len(picked) >= limit:
+            break
+    return picked
+
+
 def collect_niche(niche, cfg, out_dir, stamp):
     rows = []
     for name, value in cfg["sources"].items():
@@ -106,8 +122,13 @@ def collect_niche(niche, cfg, out_dir, stamp):
             print(f"  [{name}] 실패: {e}")
     out = out_dir / f"topics_{niche}_{stamp}.json"
     out.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+    shortlist = build_shortlist(rows)
+    sl = out_dir / f"shortlist_{niche}_{stamp}.txt"
+    sl.write_text("\n".join(f"{i}. {r['title']} — {r['outlet']}"
+                            for i, r in enumerate(shortlist, 1)) + "\n", encoding="utf-8")
     n_trusted = sum(1 for r in rows if r.get("trusted"))
     print(f"  → {out.name} ({len(rows)}건, 검증 매체 {n_trusted}건)")
+    print(f"  → {sl.name} (소재 선정용 상위 {len(shortlist)}건 — 이 파일만 읽을 것)")
     for r in rows[:6]:
         print(f"    - {r['title'][:60]}")
     return rows
